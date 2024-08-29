@@ -1,35 +1,50 @@
-"use client"
-import React, { useState } from 'react'
+"use client";
+import React, { useState } from 'react';
 
 export default function Header() {
-  const [cklickedMenu, seClickedMenu] = useState('home');
+  const [clickedMenu, setClickedMenu] = useState('home');
 
-  const handleMenuClick = (e: string) => {
-    seClickedMenu(e);
-  }
+
+  const handleMenuClick = (menu: string) => {
+    setClickedMenu(menu);
+
+    switch(menu) {
+      case 'home': 
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        break;
+      case 'about me' :
+        window.scrollTo({ top: 2780, behavior: 'smooth' });
+        break;
+      case 'skills' :
+        window.scrollTo({ top: 1580, behavior: 'smooth' });
+        break;  
+      case 'works' :
+        window.scrollTo({ top: 600, behavior: 'smooth' });
+        break;  
+    }
+  };
+
   return (
-    <nav className='fixed top-0 w-full flex justify-center pt-6 gap-8 max-w-6xl m-auto'>
-
-        <button className=' flex' onClick={() => handleMenuClick('home')}>
-            <p className=' text-normal-purple'>#</p>
-            <p className={`text-p-gray  ${cklickedMenu === 'home' && 'text-white'}`}>home</p>
+      <nav className='fixed top-0 w-full flex justify-center py-2 gap-8 bg-purple-dark m-auto'>
+        <button className='flex' onClick={() => handleMenuClick('home')}>
+          <p className='text-normal-purple'>#</p>
+          <p className={`text-p-gray ${clickedMenu === 'home' ? 'text-white' : ''}`}>home</p>
         </button>
 
-        <button className=' flex' onClick={() => handleMenuClick('works')}>
-            <p className=' text-normal-purple'>#</p>
-            <p className={`text-p-gray  ${cklickedMenu === 'works' && 'text-white'}`}>works</p>
+        <button className='flex' onClick={() => handleMenuClick('works')}>
+          <p className='text-normal-purple'>#</p>
+          <p className={`text-p-gray ${clickedMenu === 'works' ? 'text-white' : ''}`}>works</p>
         </button>
 
-        <button className=' flex' onClick={() => handleMenuClick('about me')}>
-            <p className=' text-normal-purple'>#</p>
-            <p className={`text-p-gray  ${cklickedMenu === 'about me' && 'text-white'}`}>about me</p>
+        <button className='flex' onClick={() => handleMenuClick('skills')}>
+          <p className='text-normal-purple'>#</p>
+          <p className={`text-p-gray ${clickedMenu === 'skills' ? 'text-white' : ''}`}>skills</p>
         </button>
 
-        <button className=' flex' onClick={() => handleMenuClick('contacts')}>
-            <p className=' text-normal-purple'>#</p>
-            <p className={`text-p-gray  ${cklickedMenu === 'contacts' && 'text-white'}`}>contacts</p>
+        <button className='flex' onClick={() => handleMenuClick('about me')}>
+          <p className='text-normal-purple'>#</p>
+          <p className={`text-p-gray ${clickedMenu === 'about me' ? 'text-white' : ''}`}>about me</p>
         </button>
-
-    </nav>
-  )
+      </nav>
+  );
 }

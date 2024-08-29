@@ -3,18 +3,16 @@ import Image from 'next/image';
 import DotsImage from '../../assets/dots.png';
 import LinesImage from '../../assets/lines.png';
 import CubeImage from '../../assets/gray-cube.png';
+import SectionNameAndLine from '../ui/section-name-and-line';
 
 export default function SkillsSection() {
   return (
     <section className=' mt-20 mb-20'>
-        <div className=' flex items-center gap-5'>
-          <h3 className=' font-medium text-[32px] text-white'> <span className=' text-normal-purple'>#</span>skills</h3>
-          <span className=' block w-full h-[1.5px] bg-normal-purple'></span>
-        </div>
+        <SectionNameAndLine text={'skills'}/>
 
-        <div className=' mt-20 flex justify-between'>
+        <div className=' mt-20 flex justify-between mob:justify-center'>
 
-            <div className=' w-full h-full'>
+            <div className=' w-full h-full mob:hidden'>
 
                 <div className=' relative '>
                 <Image src={DotsImage} alt='Image' className=' absolute top-0 left-20'/>
@@ -37,7 +35,7 @@ export default function SkillsSection() {
                 </div>
             </div>
 
-            <div className=' flex gap-5'>
+            <div className=' flex gap-5 mob:flex-col mob:items-center'>
 
                 <div className=' w-[180px] border-[2px] border-p-gray p-3 h-min'>
                     <h5 className=' font-semibold text-white'>Languages</h5>
@@ -48,7 +46,7 @@ export default function SkillsSection() {
                     </div>
                 </div>
 
-                <div className=' flex flex-col gap-5'>
+                <div className=' flex flex-col mob:justify-center mob:flex-row mob:flex-wrap gap-5'>
                 <div className=' w-[180px] border-[2px] border-p-gray p-3 h-min'>
                     <h5 className=' font-semibold text-white'>React stuff</h5>
                     <span className=' block h-[2px] bg-p-gray -mx-3 my-2'></span>
@@ -70,7 +68,7 @@ export default function SkillsSection() {
                 </div>
                 </div>
 
-                <div className=' flex flex-col gap-5'>
+                <div className=' flex flex-col mob:justify-center mob:flex-row mob:flex-wrap gap-5'>
                 <div className=' w-[180px] border-[2px] border-p-gray p-3 h-min'>
                     <h5 className=' font-semibold text-white'>Frameworks</h5>
                     <span className=' block h-[2px] bg-p-gray -mx-3 my-2'></span>

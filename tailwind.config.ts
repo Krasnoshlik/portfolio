@@ -14,6 +14,11 @@ const config: Config = {
         'p-gray' : '#ABB2BF',
       }
     },
+    screens: {
+      'mob': [
+        {'min': '300px', 'max': '620px'},
+      ],
+    }
   },
   plugins: [],
 };
