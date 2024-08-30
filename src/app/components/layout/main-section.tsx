@@ -25,7 +25,7 @@ export default function MainSection() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           >
-            My name Dimitr, I am
+            My name Dimitar, I am
             <span className="text-normal-purple"> React/Next.js </span>
             developer
           </motion.h2>

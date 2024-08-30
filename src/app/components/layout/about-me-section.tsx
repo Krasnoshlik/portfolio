@@ -13,7 +13,7 @@ export default function AboutMeSection() {
 
       <div className=" flex justify-between items-center">
         <p className=" text-p-gray max-w-[515px] text-2xl mob:text-xl">
-          Hi, I am Dimitr, a passionate front-end developer based in Plovdiv,
+          Hi, I am Dimitar, a passionate front-end developer based in Plovdiv,
           Bulgaria. With a strong foundation in{" "}
           <span className=" text-normal-purple">Webflow</span>, I have crafted
           15+ responsive websites for clients. <br /> Now, armed with{" "}
