@@ -31,7 +31,7 @@ export const projects: Project[] = [
     {
         image: TripmaImage,
         tech: ['React','Redux','Tailwind','Typescript'],
-        name: 'Sikapuduo',
+        name: 'Tripma',
         dis: 'Website for airplane tickets booking',
         link: 'https://tripma-nu.vercel.app',
     },
