@@ -2,6 +2,7 @@ import ShopCOImage from '../src/app/assets/shop-co-main-screen.png';
 import RoobyImage from '../src/app/assets/roooby-main-screen.png';
 import EstateryImage from '../src/app/assets/estatery-main-screen.png';
 import SikapuduoImage from '../src/app/assets/sikapuduo-main-screen.png';
+import TripmaImage from '../src/app/assets/tripma-main-screen.png';
 
 import { Project } from '../src/app/types/types.ds'
 
@@ -26,6 +27,13 @@ export const projects: Project[] = [
         name: 'Estatery',
         dis: 'Website with houses for rent or buy, you can add houses to licked and find needed house in input on main section.',
         link: 'https://estatery-psi.vercel.app',
+    },
+    {
+        image: TripmaImage,
+        tech: ['React','Redux','Tailwind','Typescript'],
+        name: 'Sikapuduo',
+        dis: 'Website for airplane tickets booking',
+        link: 'https://tripma-nu.vercel.app',
     },
     {
         image: SikapuduoImage,
